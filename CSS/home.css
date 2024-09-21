@@ -708,6 +708,7 @@
   .register-card-description {
     color: var(--Gray-Scale-600, #636a80);
     margin-top: 16px;
+    max-width: 400px;
     font: 400 14px/20px Inter, sans-serif;
   }
   
