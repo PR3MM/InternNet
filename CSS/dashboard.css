@@ -1,0 +1,232 @@
+/* body{
+    margin-top:20px;
+    color: #1a202c;
+    text-align: left;
+    background-color: #e2e8f0;    
+} */
+
+
+.dashboard{
+    display: flex;
+    height: 100vh;
+    
+}
+
+.left-db{
+    display: block;
+    width: 25%;
+}
+.right-db{
+    display: block;
+    width: 75%;
+    padding: 0px;
+    margin-top: -90px;
+    justify-content: center; 
+    align-content: center;
+    justify-content: space-around;
+    /* border: 2px solid red; */
+}
+
+
+
+
+
+.main-body {
+    padding: 15px;
+}
+.card {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+    margin: 30px;
+    padding: 40px;
+    
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+
+.gutters-sm {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.gutters-sm>.col, .gutters-sm>[class*=col-] {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem!important;
+}
+
+.bg-gray-300 {
+    background-color: #e2e8f0;
+}
+.h-100 {
+    height: 100%!important;
+}
+.shadow-none {
+    box-shadow: none!important;
+}   
+
+
+/* //upload */
+/* justify-content: center; */
+/* align-content: center; */
+
+.upload-container {
+    border-radius: 4px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    display: flex;
+    max-width: 70vw;
+    flex-direction: column;
+    padding: 30px 47px;
+    /* border: solid 2px  red; */
+    height:400px;
+  }
+  
+  .upload-title {
+    align-self: center;
+    color: #0f0f0f;
+    text-align: center;
+    padding: 0 5px;
+    font: 700 22px Mulish, sans-serif;
+  }
+  
+  .upload-area {
+    display: flex;
+    margin: 15px;
+    margin-bottom: 15px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .upload-box {
+    border-radius: 4px;
+    border: 1px dashed rgba(56, 78, 183, 0.3);
+    background-color: #f8f8ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 31px;
+  }
+  
+  .upload-icon {
+    aspect-ratio: 1.15;
+    object-fit: auto;
+    object-position: center;
+    width: 69px;
+    margin-top: 65px;
+  }
+  
+  .upload-text {
+    margin-top: 15px;
+    color: #483ea8;
+    justify-content: center;
+    padding: 5px;
+    font: 700 16px/24px Mulish, sans-serif;
+  }
+  .selected-file{
+    margin: -5px;
+    padding: 0px;
+    font: 400 12px/150% Mulish, sans-serif;
+  }
+  
+  .upload-formats {
+    align-self: stretch;
+    margin-bottom: 22px;
+    color: #676767;
+    justify-content: center;
+    padding: 5px;
+    font: 400 12px/150% Mulish, sans-serif;
+  }
+  
+  .upload-button {
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #483ea8;
+    margin-top: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 9px 14px;
+    font: 700 14px/129% Mulish, sans-serif;
+    border: none;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 991px) {
+    .upload-container {
+      padding: 0 20px;
+    }
+  
+    .upload-title {
+      white-space: initial;
+    }
+  
+    .upload-area {
+      max-width: 100%;
+    }
+  
+    .upload-box {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  
+    .upload-icon {
+      margin-top: 30px;
+    }
+  
+    .upload-button {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+
+
+
+
+
+
+  .saved-jobs{
+    height: 100%;
+    margin: 50px;
+  }
+  .section-text {
+      text-align: center;
+  }
+  .no-saved-jobs {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+.explore-jobs-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.explore-jobs-btn:hover {
+    background-color: #0056b3;
+}
+

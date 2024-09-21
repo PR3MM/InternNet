@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobCrow</title>
+    <link rel="stylesheet" href="./CSS/all.css" />
+    <link rel="stylesheet" href="./CSS/bootstrap.css" />
+    <link rel="stylesheet" href="./CSS/home.css" />
+    <!-- <link rel="stylesheet" href="/public/css/signup.css" /> -->
+    <link rel="stylesheet" href="./CSS/find.css" />
+    <link rel="stylesheet" href="./CSS/details.css" />
+    <link rel="stylesheet" href="./CSS/navbarNew.css" />
+    <link rel="stylesheet" href="./CSS/dashboard.css" />
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">JobCrow</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav gap-2">
+          <a class="nav-link active text-light" aria-current="page" href="/"
+            >Home</a>
+          <a class="nav-link text-light" href="/find">Find Work</a>
+          <a class="nav-link disabled text-light">Post a Job</a>
+          <a class="nav-link text-light" href="#">Community</a>
+          <a class="nav-link text-light" href="#">About Us </a>
+        </div>
+        <div class="d-flex align-items-center ms-auto">
+          <!-- <button type="button" class="btn btn-default px-3 me-2 text-light">
+            Login
+          </button> -->
+          <!-- <button type="button" class="btn text-light me-3">
+            <a class="Sign-a" href="/signup">Sign up for free</a>
+          </button> -->
+        
+          <header class="header-nn">
+            <a href="#">
+                
+                <img class="invert-color-nn" src="https://cdn-icons-png.flaticon.com/128/2529/2529521.png" alt="" class="icon-nn" />
+            </a>
+            <a href="#">
+                <img class="invert-color-nn"src="https://cdn-icons-png.flaticon.com/128/25/25667.png" alt="" class="icon-nn" />
+            </a>
+            <a href="#">
+                <img src="https://cdn-icons-png.flaticon.com/128/3916/3916611.png" alt="" class="icon-large-nn invert-color-nn" />
+            </a>
+            <div class="avatar-wrapper-nn">
+                    <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1326/1326405.png" alt="User avatar" class="avatar-nn" />
+                </a>
+            </div>
+          </header>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<body>
+
+    
+
+
+
+
+
+    <section class="job-search-container">
+        
+        <form class="search-form">
+            <div class="input-group">
+              <div class="input-wrapper">
+                <img loading="lazy" src="https://cdn-icons-png.flaticon.com/128/54/54481.png" class="input-icon"
+                  alt="" />
+                <label for="job-search" class="visually-hidden">Job title or Keyword</label>
+                <input type="text" id="job-search" class="input-field" placeholder="Job title, Keyword..." />
+              </div>
+              <div class="input-wrapper">
+                <img loading="lazy" src="https://cdn-icons-png.flaticon.com/128/2838/2838912.png" class="input-icon"
+                  alt="" />
+                <label for="location-search" class="visually-hidden">Your Location</label>
+                <input type="text" id="location-search" class="input-field" placeholder="Your Location" />
+              </div>
+            </div>
+            <button type="submit" class="submit-button">Find Job</button>
+          </form>
+
+        <main class="job-listings">
+          <div class="job-row">
+            <div class="job-cards">
+              <article class="job-card">
+                <a href="/details">
+                <div class="job-card-content">
+                  <div class="job-title-wrapper">
+                    <h2 class="job-title">Technical Support Specialist</h2>
+                    <div class="job-details">
+                      <span class="job-type">Part-time</span>
+                      <span class="job-salary">Salary: $20,000 - $25,000</span>
+                    </div>
+                  </div>
+                  <div class="company-info">
+                    <div class="company-logo">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/bc31e51dd0e234ee4cb55feb80821a681dc63b94d1b7a74aff4c136878c7ca2a?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="company-logo-img" alt="Google Inc. logo" />
+                    </div>
+                    <div class="company-details">
+                      <h3 class="company-name">Google Inc.</h3>
+                      <div class="company-location">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5752ef17b1e9e46a64fcc8e07a8b95e24827aeca8a9ba7194e220edbc0d45fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="location-pin" alt="" />
+                        <span class="location-text">Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8fc9698fb77925ffcafb57a0256d3b02a3789871e877c671653a101a2d8f30?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="bookmark-icon" alt="Bookmark job" />
+                  </div>
+                </div>
+              </a>
+              </article>
+              <article class="job-card">
+                <a href="/details">
+
+                <div class="job-card-content">
+                  <div class="job-title-wrapper">
+                    <h2 class="job-title">Senior UX Designer</h2>
+                    <div class="job-details">
+                      <span class="job-type">Full-Time</span>
+                      <span class="job-salary">Salary: $20,000 - $25,000</span>
+                    </div>
+                  </div>
+                  <div class="company-info">
+                    <div class="company-logo">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/adb7713b34a1e0beb6693fa2891186c3d2e62e04cdb42fea907ccc188df834d3?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="company-logo-img" alt="Google Inc. logo" />
+                    </div>
+                    <div class="company-details">
+                      <h3 class="company-name">Google Inc.</h3>
+                      <div class="company-location">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5752ef17b1e9e46a64fcc8e07a8b95e24827aeca8a9ba7194e220edbc0d45fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="location-pin" alt="" />
+                        <span class="location-text">Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8fc9698fb77925ffcafb57a0256d3b02a3789871e877c671653a101a2d8f30?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="bookmark-icon" alt="Bookmark job" />
+                  </div>
+                </div>
+                </a>
+              </article>
+              
+              <article class="job-card">
+                <a href="/details">
+
+                <div class="job-card-content">
+                  <div class="job-title-wrapper">
+                    <h2 class="job-title">Marketing Officer</h2>
+                    <div class="job-details">
+                      <span class="job-type">Internship</span>
+                      <span class="job-salary">Salary: $20,000 - $25,000</span>
+                    </div>
+                  </div>
+                  <div class="company-info">
+                    <div class="company-logo">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/23ec242987fd6aec0c9043ac7452243e9b9ba371a6b7ad629c94d769df1be17c?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="company-logo-img" alt="Google Inc. logo" />
+                    </div>
+                    <div class="company-details">
+                      <h3 class="company-name">Google Inc.</h3>
+                      <div class="company-location">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5752ef17b1e9e46a64fcc8e07a8b95e24827aeca8a9ba7194e220edbc0d45fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="location-pin" alt="" />
+                        <span class="location-text">Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8fc9698fb77925ffcafb57a0256d3b02a3789871e877c671653a101a2d8f30?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="bookmark-icon" alt="Bookmark job" />
+                  </div>
+                </div>
+                </a>
+              </article>
+            </div>
+          </div>
+          <div class="job-row">
+            <div class="job-cards">
+              <article class="job-card">
+                <a href="/details">
+
+                <div class="job-card-content">
+                  <div class="job-title-wrapper">
+                    <h2 class="job-title">Junior Graphic Designer</h2>
+                    <div class="job-details">
+                      <span class="job-type">Internship</span>
+                      <span class="job-salary">Salary: $20,000 - $25,000</span>
+                    </div>
+                  </div>
+                  <div class="company-info">
+                    <div class="company-logo">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/24a07cf606cca2379be67cd5f213edc988ca265621a5ac5041f38ad259b500a5?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="company-logo-img" alt="Google Inc. logo" />
+                    </div>
+                    <div class="company-details">
+                      <h3 class="company-name">Google Inc.</h3>
+                      <div class="company-location">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5752ef17b1e9e46a64fcc8e07a8b95e24827aeca8a9ba7194e220edbc0d45fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="location-pin" alt="" />
+                        <span class="location-text">Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8fc9698fb77925ffcafb57a0256d3b02a3789871e877c671653a101a2d8f30?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="bookmark-icon" alt="Bookmark job" />
+                  </div>
+                </div>
+                </a>
+              </article>
+              <article class="job-card">
+                <a href="/details">
+
+                <div class="job-card-content">
+                  <div class="job-title-wrapper">
+                    <h2 class="job-title">Interaction Designer</h2>
+                    <div class="job-details">
+                      <span class="job-type">Part-time</span>
+                      <span class="job-salary">Salary: $20,000 - $25,000</span>
+                    </div>
+                  </div>
+                  <div class="company-info">
+                    <div class="company-logo">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/0afd2f8d11f1f61f198259e17c307dfdcd6259e9d33f44f91780abae7466c0f2?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="company-logo-img" alt="Google Inc. logo" />
+                    </div>
+                    <div class="company-details">
+                      <h3 class="company-name">Google Inc.</h3>
+                      <div class="company-location">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5752ef17b1e9e46a64fcc8e07a8b95e24827aeca8a9ba7194e220edbc0d45fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="location-pin" alt="" />
+                        <span class="location-text">Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8fc9698fb77925ffcafb57a0256d3b02a3789871e877c671653a101a2d8f30?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="bookmark-icon" alt="Bookmark job" />
+                  </div>
+                </div>
+                </a>
+              </article>
+              <article class="job-card">
+                <a href="/details">
+
+                <div class="job-card-content">
+                  <div class="job-title-wrapper">
+                    <h2 class="job-title">Project Manager</h2>
+                    <div class="job-details">
+                      <span class="job-type">Full-Time</span>
+                      <span class="job-salary">Salary: $20,000 - $25,000</span>
+                    </div>
+                  </div>
+                  <div class="company-info">
+                    <div class="company-logo">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7779d5d59de1adc14fe262c6f0e6f660cef5ad336535e259913250bf21fb9924?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="company-logo-img" alt="Google Inc. logo" />
+                    </div>
+                    <div class="company-details">
+                      <h3 class="company-name">Google Inc.</h3>
+                      <div class="company-location">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5752ef17b1e9e46a64fcc8e07a8b95e24827aeca8a9ba7194e220edbc0d45fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="location-pin" alt="" />
+                        <span class="location-text">Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8fc9698fb77925ffcafb57a0256d3b02a3789871e877c671653a101a2d8f30?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="bookmark-icon" alt="Bookmark job" />
+                  </div>
+                </div>
+                </a>
+              </article>
+            </div>
+          </div>
+          <div class="job-row">
+            <div class="job-cards">
+              <article class="job-card">
+                <a href="/details">
+
+                <div class="job-card-content">
+                  <div class="job-title-wrapper">
+                    <h2 class="job-title">Software Engineer</h2>
+                    <div class="job-details">
+                      <span class="job-type">Full-Time</span>
+                      <span class="job-salary">Salary: $20,000 - $25,000</span>
+                    </div>
+                  </div>
+                  <div class="company-info">
+                    <div class="company-logo">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/eab66f0537e68e0c5e07d6b114016aff0b837e1d58d38e4d6fbde8f4b798e137?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="company-logo-img" alt="Google Inc. logo" />
+                    </div>
+                    <div class="company-details">
+                      <h3 class="company-name">Google Inc.</h3>
+                      <div class="company-location">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5752ef17b1e9e46a64fcc8e07a8b95e24827aeca8a9ba7194e220edbc0d45fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="location-pin" alt="" />
+                        <span class="location-text">Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8fc9698fb77925ffcafb57a0256d3b02a3789871e877c671653a101a2d8f30?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="bookmark-icon" alt="Bookmark job" />
+                  </div>
+                </div>
+                </a>
+              </article>
+              <article class="job-card">
+                <a href="/details">
+
+                <div class="job-card-content">
+                  <div class="job-title-wrapper">
+                    <h2 class="job-title">Visual Designer</h2>
+                    <div class="job-details">
+                      <span class="job-type">Full-Time</span>
+                      <span class="job-salary">Salary: $20,000 - $25,000</span>
+                    </div>
+                  </div>
+                  <div class="company-info">
+                    <div class="company-logo">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8ec0934d87c61bd4d7e8434ddad51d26186e0a25a73f62894e9a8db1e1bc39?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="company-logo-img" alt="Google Inc. logo" />
+                    </div>
+                    <div class="company-details">
+                      <h3 class="company-name">Google Inc.</h3>
+                      <div class="company-location">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5752ef17b1e9e46a64fcc8e07a8b95e24827aeca8a9ba7194e220edbc0d45fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="location-pin" alt="" />
+                        <span class="location-text">Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8fc9698fb77925ffcafb57a0256d3b02a3789871e877c671653a101a2d8f30?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="bookmark-icon" alt="Bookmark job" />
+                  </div>
+                </div>
+                </a>
+              </article>
+              <article class="job-card">
+                <a href="/details">
+
+                <div class="job-card-content">
+                  <div class="job-title-wrapper">
+                    <h2 class="job-title">Project Manager</h2>
+                    <div class="job-details">
+                      <span class="job-type">Full-Time</span>
+                      <span class="job-salary">Salary: $20,000 - $25,000</span>
+                    </div>
+                  </div>
+                  <div class="company-info">
+                    <div class="company-logo">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/547e587e917c3c67a46985fa1cb4542ae1930b2a6cbd7848a26b032604bf94b3?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="company-logo-img" alt="Google Inc. logo" />
+                    </div>
+                    <div class="company-details">
+                      <h3 class="company-name">Google Inc.</h3>
+                      <div class="company-location">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5752ef17b1e9e46a64fcc8e07a8b95e24827aeca8a9ba7194e220edbc0d45fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="location-pin" alt="" />
+                        <span class="location-text">Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8fc9698fb77925ffcafb57a0256d3b02a3789871e877c671653a101a2d8f30?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="bookmark-icon" alt="Bookmark job" />
+                  </div>
+                </div>
+                </a>
+              </article>
+            </div>
+          </div>
+          <div class="job-row">
+            <div class="job-cards">
+              <article class="job-card">
+                <a href="/details">
+
+                <div class="job-card-content">
+                  <div class="job-title-wrapper">
+                    <h2 class="job-title">UI/UX Designer</h2>
+                    <div class="job-details">
+                      <span class="job-type">Full-Time</span>
+                      <span class="job-salary">Salary: $20,000 - $25,000</span>
+                    </div>
+                  </div>
+                  <div class="company-info">
+                    <div class="company-logo">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8df1a541af944bd9624781e55a7d504c8b6d88f0b064b513fcc5df400ddd565e?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="company-logo-img" alt="Google Inc. logo" />
+                    </div>
+                    <div class="company-details">
+                      <h3 class="company-name">Google Inc.</h3>
+                      <div class="company-location">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5752ef17b1e9e46a64fcc8e07a8b95e24827aeca8a9ba7194e220edbc0d45fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="location-pin" alt="" />
+                        <span class="location-text">Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8fc9698fb77925ffcafb57a0256d3b02a3789871e877c671653a101a2d8f30?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="bookmark-icon" alt="Bookmark job" />
+                  </div>
+                </div>
+                </a>
+              </article>
+              <article class="job-card">
+                <a href="/details">
+
+                <div class="job-card-content">
+                  <div class="job-title-wrapper">
+                    <h2 class="job-title">Product Designer</h2>
+                    <div class="job-details">
+                      <span class="job-type">Full-Time</span>
+                      <span class="job-salary">Salary: $20,000 - $25,000</span>
+                    </div>
+                  </div>
+                  <div class="company-info">
+                    <div class="company-logo">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/27c6ad05349c512ff544f62667a13efeff29d13c3683cec1911baff342f993b5?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="company-logo-img" alt="Google Inc. logo" />
+                    </div>
+                    <div class="company-details">
+                      <h3 class="company-name">Google Inc.</h3>
+                      <div class="company-location">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5752ef17b1e9e46a64fcc8e07a8b95e24827aeca8a9ba7194e220edbc0d45fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="location-pin" alt="" />
+                        <span class="location-text">Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8fc9698fb77925ffcafb57a0256d3b02a3789871e877c671653a101a2d8f30?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="bookmark-icon" alt="Bookmark job" />
+                  </div>
+                </div>
+                </a>
+              </article>
+              <article class="job-card">
+                <a href="/details">
+
+                <div class="job-card-content">
+                  <div class="job-title-wrapper">
+                    <h2 class="job-title">Networking Engineer</h2>
+                    <div class="job-details">
+                      <span class="job-type">Internship</span>
+                      <span class="job-salary">Salary: $20,000 - $25,000</span>
+                    </div>
+                  </div>
+                  <div class="company-info">
+                    <div class="company-logo">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/05548f9bc007aa3f3e583c24f68f400ae33bcb62a1aaa2ed6c1e48d5ea63b137?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="company-logo-img" alt="Google Inc. logo" />
+                    </div>
+                    <div class="company-details">
+                      <h3 class="company-name">Google Inc.</h3>
+                      <div class="company-location">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5752ef17b1e9e46a64fcc8e07a8b95e24827aeca8a9ba7194e220edbc0d45fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="location-pin" alt="" />
+                        <span class="location-text">Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8fc9698fb77925ffcafb57a0256d3b02a3789871e877c671653a101a2d8f30?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="bookmark-icon" alt="Bookmark job" />
+                  </div>
+                </div>
+                </a>
+              </article>
+            </div>
+          </div>
+          <div class="job-row">
+            <div class="job-cards">
+              <article class="job-card">
+                <a href="/details">
+
+                <div class="job-card-content">
+                  <div class="job-title-wrapper">
+                    <h2 class="job-title">Front End Developer</h2>
+                    <div class="job-details">
+                      <span class="job-type">Part-time</span>
+                      <span class="job-salary">Salary: $20,000 - $25,000</span>
+                    </div>
+                  </div>
+                  <div class="company-info">
+                    <div class="company-logo">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/12506e98015b5aff94b9e6de83cce6d5a689fd5129b84c28ba92af0885fa02a9?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="company-logo-img" alt="Google Inc. logo" />
+                    </div>
+                    <div class="company-details">
+                      <h3 class="company-name">Google Inc.</h3>
+                      <div class="company-location">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5752ef17b1e9e46a64fcc8e07a8b95e24827aeca8a9ba7194e220edbc0d45fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="location-pin" alt="" />
+                        <span class="location-text">Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8fc9698fb77925ffcafb57a0256d3b02a3789871e877c671653a101a2d8f30?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="bookmark-icon" alt="Bookmark job" />
+                  </div>
+                </div>
+                </a>
+              </article>
+              <article class="job-card">
+                <a href="/details">
+
+                <div class="job-card-content">
+                  <div class="job-title-wrapper">
+                    <h2 class="job-title">Senior UX Designer</h2>
+                    <div class="job-details">
+                      <span class="job-type">Full-Time</span>
+                      <span class="job-salary">Salary: $20,000 - $25,000</span>
+                    </div>
+                  </div>
+                  <div class="company-info">
+                    <div class="company-logo">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8b148f48e101341a9f47e16f8bec43df2a125ce3f7a9a20522c035b1746b08e7?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="company-logo-img" alt="Google Inc. logo" />
+                    </div>
+                    <div class="company-details">
+                      <h3 class="company-name">Google Inc.</h3>
+                      <div class="company-location">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5752ef17b1e9e46a64fcc8e07a8b95e24827aeca8a9ba7194e220edbc0d45fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="location-pin" alt="" />
+                        <span class="location-text">Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8fc9698fb77925ffcafb57a0256d3b02a3789871e877c671653a101a2d8f30?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="bookmark-icon" alt="Bookmark job" />
+                  </div>
+                </div>
+                </a>
+              </article>
+              <article class="job-card">
+                <a href="/details">
+
+                <div class="job-card-content">
+                  <div class="job-title-wrapper">
+                    <h2 class="job-title">Marketing Manager</h2>
+                    <div class="job-details">
+                      <span class="job-type">Internship</span>
+                      <span class="job-salary">Salary: $20,000 - $25,000</span>
+                    </div>
+                  </div>
+                  <div class="company-info">
+                    <div class="company-logo">
+                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed6c4d744de0e8f4a0f9abd975cb02961b70c939e0dd9094c52d6ec125cd5e45?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="company-logo-img" alt="Google Inc. logo" />
+                    </div>
+                    <div class="company-details">
+                      <h3 class="company-name">Google Inc.</h3>
+                      <div class="company-location">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f5752ef17b1e9e46a64fcc8e07a8b95e24827aeca8a9ba7194e220edbc0d45fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="location-pin" alt="" />
+                        <span class="location-text">Dhaka, Bangladesh</span>
+                      </div>
+                    </div>
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8fc9698fb77925ffcafb57a0256d3b02a3789871e877c671653a101a2d8f30?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="bookmark-icon" alt="Bookmark job" />
+                  </div>
+                </div>
+                </a>
+              </article>
+            </div>
+          </div>
+        </main>
+        <nav class="pagination" aria-label="Job listing pages">
+          <button class="prev-page " aria-label="Go to previous page">
+            <img class="invert-image" loading="lazy" src="https://cdn-icons-png.freepik.com/256/152/152417.png?ga=GA1.1.1187748767.1708226618&semt=ais_hybrid" class="prev-icon" alt="" />
+          </button>
+          <div class="page-numbers">
+            <span class="active-page">01</span>
+            <span class="page-number">02</span>
+            <span class="page-number">03</span>
+            <span class="page-number">04</span>
+            <span class="page-number">05</span>
+          </div>
+          <button class="next-page invert" aria-label="Go to next page">
+            <img class="invert-image" loading="lazy" src="https://cdn-icons-png.freepik.com/256/152/152418.png?ga=GA1.1.1187748767.1708226618&semt=ais_hybrid" class="next-icon" alt="" />
+          </button>
+        </nav>
+      </section>
+
+
+
+
+
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-columns">
+            <div class="footer-column">
+              <div class="company-info">
+                <div class="logo-container">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6fe6878ba6231e67e1361dc2c26f0f1f32811d6350cc6b578d521435e6132229?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="logo" alt="JobCrow logo" />
+                  <div class="company-name-footer">JobCrow</div>
+                </div>
+                <div class="contact-info">
+                  <div class="phone-container">
+                    <div class="phone-label">Call now:</div>
+                    <div class="phone-number">(319) 555-0115</div>
+                  </div>
+                  <address class="address">
+                    Crow Solutions<br>
+                    Plot No. 27, Rajiv Gandhi Infotech Park<br>
+                    Phase 3, Hinjewadi<br>
+                    Pune, Maharashtra 411057<br>
+                    India              </address>
+                </div>
+              </div>
+            </div>
+            <div class="footer-links">
+              <div class="links-container">
+                <div class="links-columns">
+                  <div class="quick-links">
+                    <h3 class="links-title">Quick Link</h3>
+                    <nav class="links-list">
+                      <a href="#" class="link-item">About</a>
+                      <a href="#" class="link-item">
+                        <!-- <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4cf5e153916880fcbcda873ec83b58ba447ecf47d060898d67faff2ddd81fc06?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="active-link-icon" alt="" /> -->
+                        <span>Contact</span>
+                      </a>
+                      <a href="#" class="link-item">Pricing</a>
+                      <a href="#" class="link-item">Blog</a>
+                    </nav>
+                  </div>
+                  <div class="quick-links">
+                    <h3 class="links-title">Candidate</h3>
+                    <nav class="links-list">
+                      <a href="#" class="link-item">Browse Jobs</a>
+                      <a href="#" class="link-item">Browse Employers</a>
+                      <a href="#" class="link-item">Candidate Dashboard</a>
+                      <a href="#" class="link-item">Saved Jobs</a>
+                    </nav>
+                  </div>
+                  <div class="quick-links">
+                    <h3 class="links-title">Employers</h3>
+                    <nav class="links-list">
+                      <a href="#" class="link-item">Post a Job</a>
+                      <a href="#" class="link-item">Browse Candidates</a>
+                      <a href="#" class="link-item">Employers Dashboard</a>
+                      <a href="#" class="link-item">Applications</a>
+                    </nav>
+                  </div>
+                  <div class="quick-links">
+                    <h3 class="links-title">Support</h3>
+                    <nav class="links-list">
+                      <a href="#" class="link-item">Faqs</a>
+                      <a href="#" class="link-item">Privacy Policy</a>
+                      <a href="#" class="link-item">Terms & Conditions</a>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-content">
+            <div class="copyright">© 2024 JobCrow - Job Portal. All rights Reserved</div>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/cb214bee65be90895565b871f4f61e858f49e049d89beec31fb5e52f5b66ccc5?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="social-icon" alt="" />
+              </a>
+              <a href="#" aria-label="Twitter">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe49856e68ad1db4faf78072d3463c8b786c2c4076344992d4eefd058d1294b3?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="social-icon" alt="" />
+              </a>
+              <a href="#" aria-label="Instagram">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/09c274a205e06cddbeb6c0aeab71b3c1488f396dca318dcfc9ac7cfefbff9e6a?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="social-icon" alt="" />
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7dc11865bd705109f5953a39b1c24f735fec53d1d9a7763019c0efe43428f7fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="social-icon" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </body>
+    </html>
+    

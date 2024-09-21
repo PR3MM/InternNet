@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobCrow</title>
+    <link rel="stylesheet" href="./CSS/all.css" />
+    <link rel="stylesheet" href="./CSS/bootstrap.css" />
+    <link rel="stylesheet" href="./CSS/home.css" />
+    <!-- <link rel="stylesheet" href="/public/css/signup.css" /> -->
+    <link rel="stylesheet" href="./CSS/find.css" />
+    <link rel="stylesheet" href="./CSS/details.css" />
+    <link rel="stylesheet" href="./CSS/navbarNew.css" />
+    <link rel="stylesheet" href="./CSS/dashboard.css" />
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">JobCrow</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav gap-2">
+          <a class="nav-link active text-light" aria-current="page" href="/"
+            >Home</a>
+          <a class="nav-link text-light" href="/find">Find Work</a>
+          <a class="nav-link disabled text-light">Post a Job</a>
+          <a class="nav-link text-light" href="#">Community</a>
+          <a class="nav-link text-light" href="#">About Us </a>
+        </div>
+        <div class="d-flex align-items-center ms-auto">
+          <!-- <button type="button" class="btn btn-default px-3 me-2 text-light">
+            Login
+          </button> -->
+          <!-- <button type="button" class="btn text-light me-3">
+            <a class="Sign-a" href="/signup">Sign up for free</a>
+          </button> -->
+        
+          <header class="header-nn">
+            <a href="#">
+                
+                <img class="invert-color-nn" src="https://cdn-icons-png.flaticon.com/128/2529/2529521.png" alt="" class="icon-nn" />
+            </a>
+            <a href="#">
+                <img class="invert-color-nn"src="https://cdn-icons-png.flaticon.com/128/25/25667.png" alt="" class="icon-nn" />
+            </a>
+            <a href="#">
+                <img src="https://cdn-icons-png.flaticon.com/128/3916/3916611.png" alt="" class="icon-large-nn invert-color-nn" />
+            </a>
+            <div class="avatar-wrapper-nn">
+                    <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1326/1326405.png" alt="User avatar" class="avatar-nn" />
+                </a>
+            </div>
+          </header>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<div class="dashboard">
+    <div class="left-db">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                    <div class="mt-3">
+                        <h4>John Doe</h4>
+                        <p class="text-secondary mb-1">Full Stack Developer</p>
+                        <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
+                        <button class="btn btn-primary">Follow</button>
+                        <button class="btn btn-outline-primary">Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-db">
+        <h1>Welcome, [User Name]!</h1>
+
+        <h5>Upload your latest resume to increase your chances of being noticed by top employers.</h5>
+        <section class="upload-container">
+            <h2 class="upload-title">Upload Your Resume</h2>
+            <div class="upload-area">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <div class="upload-box">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b485c445813f61d2093b0716284119fd0385bca82106d8e3ad3ddfd4ad41ab2a?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="upload-icon" alt="Upload icon" />
+                        <p class="upload-text">
+                            <span>Drag & drop files or</span>
+                            <label style="text-decoration: underline; cursor: pointer;">
+                                Browse
+                                <input type="file" id="resume-upload" name="resume" style="display: none;" accept=".pdf, .doc, .docx, .jpeg, .png, .gif, .mp4, .psd, .ai, .ppt" onchange="handleFileChange(this)" />
+                            </label>
+                            <p class="selected-file ">No file selected</p>
+                        </p>
+                        <p class="upload-formats">
+                            Supported formats: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT
+                        </p>
+                    </div>
+                    <button type="submit" class="upload-button">Upload Files</button>
+                </form>
+            </div>
+        </section>
+    </div>
+</div>
+
+<div class="dashboard-jobs">
+    <div class="saved-jobs">
+        <div class="section-title">Saved Jobs</div>
+        <div class="section-text">Review and manage the jobs you've saved for later. Make sure to apply before the deadlines.</div>
+        <div class="no-saved-jobs">
+            <p>You have not saved any jobs yet. Start exploring job listings and save the ones that interest you for easy access later.</p>
+            <a href="/find" class="explore-jobs-btn">Explore Job Listings</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function handleFileChange(input) {
+        const fileName = input.files[0].name;
+        document.querySelector('.selected-file').textContent = `Selected file: ${fileName}`;
+    }
+</script>
+
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <div class="company-info">
+            <div class="logo-container">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6fe6878ba6231e67e1361dc2c26f0f1f32811d6350cc6b578d521435e6132229?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="logo" alt="JobCrow logo" />
+              <div class="company-name-footer">JobCrow</div>
+            </div>
+            <div class="contact-info">
+              <div class="phone-container">
+                <div class="phone-label">Call now:</div>
+                <div class="phone-number">(319) 555-0115</div>
+              </div>
+              <address class="address">
+                Crow Solutions<br>
+                Plot No. 27, Rajiv Gandhi Infotech Park<br>
+                Phase 3, Hinjewadi<br>
+                Pune, Maharashtra 411057<br>
+                India              </address>
+            </div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="links-container">
+            <div class="links-columns">
+              <div class="quick-links">
+                <h3 class="links-title">Quick Link</h3>
+                <nav class="links-list">
+                  <a href="#" class="link-item">About</a>
+                  <a href="#" class="link-item">
+                    <!-- <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4cf5e153916880fcbcda873ec83b58ba447ecf47d060898d67faff2ddd81fc06?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="active-link-icon" alt="" /> -->
+                    <span>Contact</span>
+                  </a>
+                  <a href="#" class="link-item">Pricing</a>
+                  <a href="#" class="link-item">Blog</a>
+                </nav>
+              </div>
+              <div class="quick-links">
+                <h3 class="links-title">Candidate</h3>
+                <nav class="links-list">
+                  <a href="#" class="link-item">Browse Jobs</a>
+                  <a href="#" class="link-item">Browse Employers</a>
+                  <a href="#" class="link-item">Candidate Dashboard</a>
+                  <a href="#" class="link-item">Saved Jobs</a>
+                </nav>
+              </div>
+              <div class="quick-links">
+                <h3 class="links-title">Employers</h3>
+                <nav class="links-list">
+                  <a href="#" class="link-item">Post a Job</a>
+                  <a href="#" class="link-item">Browse Candidates</a>
+                  <a href="#" class="link-item">Employers Dashboard</a>
+                  <a href="#" class="link-item">Applications</a>
+                </nav>
+              </div>
+              <div class="quick-links">
+                <h3 class="links-title">Support</h3>
+                <nav class="links-list">
+                  <a href="#" class="link-item">Faqs</a>
+                  <a href="#" class="link-item">Privacy Policy</a>
+                  <a href="#" class="link-item">Terms & Conditions</a>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <div class="copyright">© 2024 JobCrow - Job Portal. All rights Reserved</div>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/cb214bee65be90895565b871f4f61e858f49e049d89beec31fb5e52f5b66ccc5?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="social-icon" alt="" />
+          </a>
+          <a href="#" aria-label="Twitter">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe49856e68ad1db4faf78072d3463c8b786c2c4076344992d4eefd058d1294b3?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="social-icon" alt="" />
+          </a>
+          <a href="#" aria-label="Instagram">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/09c274a205e06cddbeb6c0aeab71b3c1488f396dca318dcfc9ac7cfefbff9e6a?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="social-icon" alt="" />
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7dc11865bd705109f5953a39b1c24f735fec53d1d9a7763019c0efe43428f7fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="social-icon" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

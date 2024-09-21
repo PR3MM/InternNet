@@ -1,0 +1,57 @@
+.header-nn {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    /* padding: 24px 39px 24px 80px; */
+  }
+  
+  @media (max-width: 991px) {
+    .header-nn {
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+  }
+  
+  .icon-nn {
+    aspect-ratio: 1;
+    object-fit: fill;
+    width: 10px;
+  }
+  
+  .icon-large-nn {
+    aspect-ratio: 1.0;
+    object-fit: contain;
+    width: 22px;
+    /* background-color: black; */
+  }
+  
+  .avatar-wrapper-nn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+  }
+  
+  .avatar-nn {
+    aspect-ratio: 1;
+    object-fit: cover;
+    width: 25px;
+  }
+  
+  .visually-hidden-nn {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .invert-color-nn{
+    filter: invert(100%);
+    width: 20px;
+  }
