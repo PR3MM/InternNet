@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./CSS/details.css" />
     <link rel="stylesheet" href="./CSS/navbarNew.css" />
     <link rel="stylesheet" href="./CSS/dashboard.css" />
+    <link rel="stylesheet" href="./CSS/Speech.css" />
+    <script src="/speech.js"></script>
   </head>
   <nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container-fluid">
@@ -36,15 +38,27 @@
           <a class="nav-link text-light" href="#">Community</a>
           <a class="nav-link text-light" href="#">About Us </a>
         </div>
+        <!--  Feature to increse or decrease the size of the text -->
+        <div class="font-controls">
+          <button class="btn btn-default text-light" id="font-size-decrease" aria-label="Decrease Font Size">
+            <span aria-hidden="true">-</span>
+          </button>
+          <button class="btn btn-default text-light" id="font-size-increase" aria-label="Increase Font Size">
+            <span aria-hidden="true">+</span>
+          </button>
+        </div>
         <div class="d-flex align-items-center ms-auto">
-          <!-- <button type="button" class="btn btn-default px-3 me-2 text-light">
+          <button type="button" class="btn btn-default px-3 me-2 text-light">
             Login
-          </button> -->
-          <!-- <button type="button" class="btn text-light me-3">
+          </button> 
+           <button type="button" class="btn text-light me-3">
             <a class="Sign-a" href="/signup">Sign up for free</a>
-          </button> -->
+          </button>
+          <button id="speak-on-hover-btn" onclick="toggleSpeakOnHover()" aria-label="Toggle speak on hover">
+            Enable Speak on Hover
+          </button>
         
-          <header class="header-nn">
+          <!-- <header class="header-nn">
             <a href="#">
                 
                 <img class="invert-color-nn" src="https://cdn-icons-png.flaticon.com/128/2529/2529521.png" alt="" class="icon-nn" />
@@ -60,7 +74,7 @@
                     <img src="https://cdn-icons-png.flaticon.com/128/1326/1326405.png" alt="User avatar" class="avatar-nn" />
                 </a>
             </div>
-          </header>
+          </header> -->
 
         </div>
       </div>
