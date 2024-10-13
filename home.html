@@ -1,64 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InternNet</title>
-    <link rel="stylesheet" href="./CSS/all.css" />
-    <link rel="stylesheet" href="./CSS/bootstrap.css" />
-    <link rel="stylesheet" href="./CSS/home.css" />
-    <!-- <link rel="stylesheet" href="/public/css/signup.css" /> -->
-    <link rel="stylesheet" href="./CSS/find.css" />
-    <link rel="stylesheet" href="./CSS/details.css" />
-    <link rel="stylesheet" href="./CSS/navbarNew.css" />
-    <link rel="stylesheet" href="./CSS/dashboard.css" />
-    <link rel="stylesheet" href="./CSS/Speech.css" />
-    <script src="/speech.js"></script>
-  </head>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-    <div class="container-fluid">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InternNet</title>
+  <link rel="stylesheet" href="./CSS/all.css" />
+  <link rel="stylesheet" href="./CSS/bootstrap.css" />
+  <link rel="stylesheet" href="./CSS/home.css" />
+  <!-- <link rel="stylesheet" href="/public/css/signup.css" /> -->
+  <link rel="stylesheet" href="./CSS/find.css" />
+  <link rel="stylesheet" href="./CSS/details.css" />
+  <link rel="stylesheet" href="./CSS/navbarNew.css" />
+  <link rel="stylesheet" href="./CSS/dashboard.css" />
+  <link rel="stylesheet" href="./CSS/Speech.css" />
+  <script src="/speech.js"></script>
+  <script src="/SpeechReco.js"></script>
+  <script src="/font-size.js"></script>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <div class="container-fluid">
+    <!-- <div class="Navbar-links" > -->
       <a class="navbar-brand" href="home.html">InternNet</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav gap-2">
-          <a class="nav-link active text-light" aria-current="page" href="home.html"
-            >Home</a>
+          <a class="nav-link active text-light" aria-current="page" href="home.html">Home</a>
           <a class="nav-link text-light" href="find.html">Find Work</a>
           <a class="nav-link disabled text-light">Post a Job</a>
           <a class="nav-link text-light" href="#">Community</a>
           <a class="nav-link text-light" href="#">About Us </a>
         </div>
         <!--  Feature to increse or decrease the size of the text -->
-        <div class="font-controls">
-          <button class="btn btn-default text-light" id="font-size-decrease" aria-label="Decrease Font Size">
-            <span aria-hidden="true">-</span>
-          </button>
-          <button class="btn btn-default text-light" id="font-size-increase" aria-label="Increase Font Size">
-            <span aria-hidden="true">+</span>
-          </button>
-        </div>
+        
         <div class="d-flex align-items-center ms-auto">
-          <button type="button" class="btn btn-default px-3 me-2 text-light">
+          <button type="button" class="btn-n ">
             Login
-          </button> 
-           <button type="button" class="btn text-light me-3">
+          </button>
+          <button type="button" class="btn-n ">
             <a class="Sign-a" href="/signup">Sign up for free</a>
           </button>
-          <button id="speak-on-hover-btn" onclick="toggleSpeakOnHover()" aria-label="Toggle speak on hover">
-            Enable Speak on Hover
-          </button>
-        
-          <!-- <header class="header-nn">
+        </div>
+
+        <!-- <header class="header-nn">
             <a href="#">
                 
                 <img class="invert-color-nn" src="https://cdn-icons-png.flaticon.com/128/2529/2529521.png" alt="" class="icon-nn" />
@@ -76,208 +63,211 @@
             </div>
           </header> -->
 
-        </div>
       </div>
+    <!-- </div> -->
+      
+  </div>
+</nav>
+<div class="features">
+  <section class="job-search-container">
+    <div class="controls-container">
+      <div class="font-controls">
+        <button class="font-btn" id="font-size-decrease" aria-label="Decrease Font Size">-</button>
+        <button class="font-btn" id="font-size-increase" aria-label="Increase Font Size">+</button>
+        <button id="speak-on-hover-btn" class="btn-toggle" onclick="toggleSpeakOnHover()" aria-label="Toggle speak on hover">
+          Enable Speak on Hover
+        </button>
+      </div>
+
+      <button type="button" id="startBtn" class="voice-button" aria-label="Start Speech Recognition">
+        <img src="https://cdn-icons-png.freepik.com/256/3288/3288805.png" alt="Microphone icon" class="mic-icon">
+      </button>
     </div>
-  </nav>
+
+    <div id="output" class="output-text">Try speaking Scroll Up/down, Increase/Decrease Font size, Go to Find Work Page</div>
+  </section>
+</div>
+
+
 
 <body>
 
-    <div class="home_page">
-      <section>
-        <div class="home_page_content">
+  <div class="home_page">
+    <section>
+      <div class="home_page_content">
 
-          <div class="home_page_text">
+        <div class="home_page_text">
 
-            <div class="home-text">
-              <p class="text-dark hero-text">
-                Find a job that suits your interest & skills.
-              </p>
-              <p class="text-dark hero-subtext">
-                Empowering Youth through No Experience Job Opportunities
-              </p>
-              <!-- <a href="#" class="cta-button hbtn">Get started</a> -->
-            </div>
-
+          <div class="home-text">
+            <p class="text-dark hero-text">
+              Find a job that suits your interest & skills.
+            </p>
+            <p class="text-dark hero-subtext">
+              Empowering Youth through No Experience Job Opportunities
+            </p>
+            <!-- <a href="#" class="cta-button hbtn">Get started</a> -->
           </div>
 
-
-
-          <div class="home-page-pic">
-            <figure class="image-container">
-              <img loading="lazy"
-                src="https://img.freepik.com/premium-vector/crossplatform-testing-abstract-concept-vector-illustration_107173-28269.jpg?ga=GA1.1.1187748767.1708226618&semt=ais_user"
-                class="responsive-image" alt="Description of the image" />
-            </figure>
-          </div>
         </div>
 
-        <section class="job-search-container">
-          <form class="search-form">
-            <div class="input-group">
-              <div class="input-wrapper">
-                <img loading="lazy" src="https://cdn-icons-png.flaticon.com/128/54/54481.png" class="input-icon"
-                  alt="" />
-                <label for="job-search" class="visually-hidden">Job title or Keyword</label>
-                <input type="text" id="job-search" class="input-field" placeholder="Job title, Keyword..." />
-              </div>
-              <div class="input-wrapper">
-                <img loading="lazy" src="https://cdn-icons-png.flaticon.com/128/2838/2838912.png" class="input-icon"
-                  alt="" />
-                <label for="location-search" class="visually-hidden">Your Location</label>
-                <input type="text" id="location-search" class="input-field" placeholder="Your Location" />
-              </div>
-            </div>
-            <button type="submit" class="submit-button">Find Job</button>
-          </form>
-          
-        </section>
-      </section>
 
+
+        <div class="home-page-pic">
+          <figure class="image-container">
+            <img loading="lazy"
+              src="https://img.freepik.com/premium-vector/crossplatform-testing-abstract-concept-vector-illustration_107173-28269.jpg?ga=GA1.1.1187748767.1708226618&semt=ais_user"
+              class="responsive-image" alt="Description of the image" />
+          </figure>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+
+
+  <section class="stats-container">
+    <div class="stats-wrapper">
+      <div class="stats-grid">
+        <article class="stat-card">
+          <div class="stat-icon stat-icon-light">
+            <img src="https://cdn-icons-png.flaticon.com/128/1063/1063376.png" alt="Live Job Icon" class="stat-image" />
+          </div>
+          <div class="stat-content">
+            <p class="stat-number">1,75,324</p>
+            <p class="stat-label">Live Job</p>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon stat-icon-dark">
+            <img src="https://cdn-icons-png.flaticon.com/128/993/993891.png" alt="Companies Icon" class="stat-image" />
+          </div>
+          <div class="stat-content">
+            <p class="stat-number">97,354</p>
+            <p class="stat-label">Companies</p>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon stat-icon-light">
+            <img src="https://cdn-icons-png.flaticon.com/512/1628/1628428.png" alt="Candidates Icon"
+              class="stat-image" />
+          </div>
+          <div class="stat-content">
+            <p class="stat-number">38,47,154</p>
+            <p class="stat-label">Candidates</p>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <div class="stat-icon stat-icon-light">
+            <img src="https://cdn-icons-png.flaticon.com/128/3850/3850259.png" alt="New Jobs Icon" class="stat-image" />
+          </div>
+          <div class="stat-content">
+            <p class="stat-number">7,532</p>
+            <p class="stat-label">New Jobs</p>
+          </div>
+        </article>
+      </div>
     </div>
-
-
-
-
-    <section class="stats-container">
-      <div class="stats-wrapper">
-        <div class="stats-grid">
-          <article class="stat-card">
-            <div class="stat-icon stat-icon-light">
-              <img src="https://cdn-icons-png.flaticon.com/128/1063/1063376.png" alt="Live Job Icon"
-                class="stat-image" />
-            </div>
-            <div class="stat-content">
-              <p class="stat-number">1,75,324</p>
-              <p class="stat-label">Live Job</p>
-            </div>
-          </article>
-
-          <article class="stat-card">
-            <div class="stat-icon stat-icon-dark">
-              <img src="https://cdn-icons-png.flaticon.com/128/993/993891.png" alt="Companies Icon"
-                class="stat-image" />
-            </div>
-            <div class="stat-content">
-              <p class="stat-number">97,354</p>
-              <p class="stat-label">Companies</p>
-            </div>
-          </article>
-
-          <article class="stat-card">
-            <div class="stat-icon stat-icon-light">
-              <img src="https://cdn-icons-png.flaticon.com/512/1628/1628428.png" alt="Candidates Icon"
-                class="stat-image" />
-            </div>
-            <div class="stat-content">
-              <p class="stat-number">38,47,154</p>
-              <p class="stat-label">Candidates</p>
-            </div>
-          </article>
-
-          <article class="stat-card">
-            <div class="stat-icon stat-icon-light">
-              <img src="https://cdn-icons-png.flaticon.com/128/3850/3850259.png" alt="New Jobs Icon"
-                class="stat-image" />
-            </div>
-            <div class="stat-content">
-              <p class="stat-number">7,532</p>
-              <p class="stat-label">New Jobs</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+  </section>
 
 
 
 
 
-    <!-- How it works -->
+  <!-- How it works -->
 
-    <section class="how-InternNet-works">
-      <div class="content-wrapper">
-        <h2 class="section-title">How InternNet Works</h2>
-        <div class="steps-container">
-          <div class="steps-grid">
-            
-            <!-- Step 1: Create Account -->
-            <div class="step-column">
-              <div class="step-card">
-                <div class="icon-wrapper">
-                  <img src="https://cdn-icons-png.flaticon.com/128/1144/1144760.png" alt="Create account icon"
-                    class="step-icon" />
-                </div>
-                <div class="step-content">
-                  <h3 class="step-title">Create Account</h3>
-                  <p class="step-description">Sign up easily by providing basic information to start your job search journey.</p>
-                </div>
+  <section class="how-InternNet-works">
+    <div class="content-wrapper">
+      <h2 class="section-title">How InternNet Works</h2>
+      <div class="steps-container">
+        <div class="steps-grid">
+
+          <!-- Step 1: Create Account -->
+          <div class="step-column">
+            <div class="step-card">
+              <div class="icon-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/128/1144/1144760.png" alt="Create account icon"
+                  class="step-icon" />
+              </div>
+              <div class="step-content">
+                <h3 class="step-title">Create Account</h3>
+                <p class="step-description">Sign up easily by providing basic information to start your job search
+                  journey.</p>
               </div>
             </div>
-            
-            <!-- Step 2: Upload CV/Resume -->
-            <div class="step-column">
-              <div class="step-card highlighted-step">
-                <div class="icon-wrapper highlighted-icon">
-                  <img src="https://cdn-icons-png.flaticon.com/128/2956/2956800.png" alt="Upload CV/Resume icon"
-                    class="step-icon" />
-                </div>
-                <div class="step-content">
-                  <h3 class="step-title">Upload CV/Resume</h3>
-                  <p class="step-description">Easily upload your CV/Resume to build a professional profile that stands out.</p>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Step 3: Find Suitable Job -->
-            <div class="step-column">
-              <div class="step-card">
-                <div class="icon-wrapper">
-                  <img src="https://cdn-icons-png.flaticon.com/128/3326/3326682.png" alt="Find suitable job icon"
-                    class="step-icon" />
-                </div>
-                <div class="step-content">
-                  <h3 class="step-title">Find Suitable Job</h3>
-                  <p class="step-description">Search and filter through thousands of job opportunities to find the best match.</p>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Step 4: Apply for Jobs -->
-            <div class="step-column">
-              <div class="step-card">
-                <div class="icon-wrapper">
-                  <img src="https://cdn-icons-png.flaticon.com/128/3856/3856668.png" alt="Apply job icon"
-                    class="step-icon" />
-                </div>
-                <div class="step-content">
-                  <h3 class="step-title">Apply for Jobs</h3>
-                  <p class="step-description">Submit your application with one click and track your progress directly on the platform.</p>
-                </div>
-              </div>
-            </div>
-    
           </div>
+
+          <!-- Step 2: Upload CV/Resume -->
+          <div class="step-column">
+            <div class="step-card highlighted-step">
+              <div class="icon-wrapper highlighted-icon">
+                <img src="https://cdn-icons-png.flaticon.com/128/2956/2956800.png" alt="Upload CV/Resume icon"
+                  class="step-icon" />
+              </div>
+              <div class="step-content">
+                <h3 class="step-title">Upload CV/Resume</h3>
+                <p class="step-description">Easily upload your CV/Resume to build a professional profile that stands
+                  out.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Find Suitable Job -->
+          <div class="step-column">
+            <div class="step-card">
+              <div class="icon-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/128/3326/3326682.png" alt="Find suitable job icon"
+                  class="step-icon" />
+              </div>
+              <div class="step-content">
+                <h3 class="step-title">Find Suitable Job</h3>
+                <p class="step-description">Search and filter through thousands of job opportunities to find the best
+                  match.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Apply for Jobs -->
+          <div class="step-column">
+            <div class="step-card">
+              <div class="icon-wrapper">
+                <img src="https://cdn-icons-png.flaticon.com/128/3856/3856668.png" alt="Apply job icon"
+                  class="step-icon" />
+              </div>
+              <div class="step-content">
+                <h3 class="step-title">Apply for Jobs</h3>
+                <p class="step-description">Submit your application with one click and track your progress directly on
+                  the platform.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </section>
-    
+    </div>
+  </section>
 
 
 
-    <section class="featured-jobs">
-      <div class="jobs-container">
-        <header class="header">
-          <h2 class="section-title">Featured job</h2>
-          <a href="/find" class="view-all">
-            View All
-            <img src="https://cdn-icons-png.flaticon.com/128/3550/3550091.png" alt="" class="icon" />
-          </a>
-        </header>
-        <div class="job-grid">
-          <div class="job-row">
-            <article class="job-card job-card-highlight">
-              <a href="/details">
+
+  <section class="featured-jobs">
+    <div class="jobs-container">
+      <header class="header">
+        <h2 class="section-title">Featured job</h2>
+        <a href="/find" class="view-all">
+          View All
+          <img src="https://cdn-icons-png.flaticon.com/128/3550/3550091.png" alt="" class="icon" />
+        </a>
+      </header>
+      <div class="job-grid">
+        <div class="job-row">
+          <article class="job-card job-card-highlight">
+            <a href="/details">
               <h3 class="job-title">Technical Support Specialist</h3>
               <div class="job-details">
                 <span class="job-type">Internship</span>
@@ -285,9 +275,7 @@
               </div>
               <div class="company-info">
                 <div class="company-logo">
-                  <img
-                    src="/api/placeholder/48/48?text=TCS"
-                    alt="Tata Consultancy Services logo" class="icon" />
+                  <img src="/api/placeholder/48/48?text=TCS" alt="Tata Consultancy Services logo" class="icon" />
                 </div>
                 <div class="company-details">
                   <span class="company-name">Tata Consultancy Services</span>
@@ -305,9 +293,9 @@
                 </button>
               </div>
             </a>
-            </article>
-            <article class="job-card job-card-highlight">
-              <a href="/details">
+          </article>
+          <article class="job-card job-card-highlight">
+            <a href="/details">
               <h3 class="job-title">Junior UX Designer</h3>
               <div class="job-details">
                 <span class="job-type">Part-Time</span>
@@ -315,9 +303,7 @@
               </div>
               <div class="company-info">
                 <div class="company-logo">
-                  <img
-                    src="/api/placeholder/48/48?text=Infosys"
-                    alt="Infosys logo" class="icon" />
+                  <img src="/api/placeholder/48/48?text=Infosys" alt="Infosys logo" class="icon" />
                 </div>
                 <div class="company-details">
                   <span class="company-name">Infosys</span>
@@ -334,10 +320,10 @@
                     alt="" class="bookmark-icon" />
                 </button>
               </div>
-              </a>
-            </article>
-            <article class="job-card">
-              <a href="/details">
+            </a>
+          </article>
+          <article class="job-card">
+            <a href="/details">
               <h3 class="job-title">Marketing Intern</h3>
               <div class="job-details">
                 <span class="job-type">Internship</span>
@@ -345,9 +331,7 @@
               </div>
               <div class="company-info">
                 <div class="company-logo">
-                  <img
-                    src="/api/placeholder/48/48?text=Wipro"
-                    alt="Wipro logo" class="icon" />
+                  <img src="/api/placeholder/48/48?text=Wipro" alt="Wipro logo" class="icon" />
                 </div>
                 <div class="company-details">
                   <span class="company-name">Wipro</span>
@@ -364,12 +348,12 @@
                     alt="" class="bookmark-icon" />
                 </button>
               </div>
-              </a>
-            </article>
-          </div>
-          <div class="job-row">
-            <article class="job-card">
-              <a href="/details">
+            </a>
+          </article>
+        </div>
+        <div class="job-row">
+          <article class="job-card">
+            <a href="/details">
               <h3 class="job-title">Data Science Intern</h3>
               <div class="job-details">
                 <span class="job-type">Internship</span>
@@ -377,9 +361,7 @@
               </div>
               <div class="company-info">
                 <div class="company-logo">
-                  <img
-                    src="/api/placeholder/48/48?text=HCL"
-                    alt="HCL Technologies logo" class="icon" />
+                  <img src="/api/placeholder/48/48?text=HCL" alt="HCL Technologies logo" class="icon" />
                 </div>
                 <div class="company-details">
                   <span class="company-name">HCL Technologies</span>
@@ -396,10 +378,10 @@
                     alt="" class="bookmark-icon" />
                 </button>
               </div>
-              </a>
-            </article>
-            <article class="job-card">
-              <a href="/details">
+            </a>
+          </article>
+          <article class="job-card">
+            <a href="/details">
               <h3 class="job-title">UI/UX Design Intern</h3>
               <div class="job-details">
                 <span class="job-type">Internship</span>
@@ -407,9 +389,7 @@
               </div>
               <div class="company-info">
                 <div class="company-logo">
-                  <img
-                    src="/api/placeholder/48/48?text=Tech Mahindra"
-                    alt="Tech Mahindra logo" class="icon" />
+                  <img src="/api/placeholder/48/48?text=Tech Mahindra" alt="Tech Mahindra logo" class="icon" />
                 </div>
                 <div class="company-details">
                   <span class="company-name">Tech Mahindra</span>
@@ -426,10 +406,10 @@
                     alt="" class="bookmark-icon" />
                 </button>
               </div>
-              </a>
-            </article>
-            <article class="job-card">
-              <a href="/details">
+            </a>
+          </article>
+          <article class="job-card">
+            <a href="/details">
               <h3 class="job-title">Digital Marketing Intern</h3>
               <div class="job-details">
                 <span class="job-type">Part-Time</span>
@@ -437,9 +417,7 @@
               </div>
               <div class="company-info">
                 <div class="company-logo">
-                  <img
-                    src="/api/placeholder/48/48?text=Cognizant"
-                    alt="Cognizant logo" class="icon" />
+                  <img src="/api/placeholder/48/48?text=Cognizant" alt="Cognizant logo" class="icon" />
                 </div>
                 <div class="company-details">
                   <span class="company-name">Cognizant</span>
@@ -453,157 +431,167 @@
                 <button class="bookmark-button" aria-label="Bookmark job">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a8fc9698fb77925ffcafb57a0256d3b02a3789871e877c671653a101a2d8f30?apiKey=91f675d5e80646bf9c3e3fcf811a5495&"
-                    alt="" class="bookmark-icon" />  
+                    alt="" class="bookmark-icon" />
                 </button>
               </div>
-              </a> 
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-
-    <section class="register-section">
-      <div class="register-container">
-        <div class="register-options">
-    
-          <!-- Register as Candidate -->
-          <article class="register-option">
-            <div class="register-card">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/34e5a29a00666c18717554a884685a3b62c06f5e43c8d6a58e16a14552438cab?apiKey=91f675d5e80646bf9c3e3fcf811a5495&"
-                alt="Candidate registration background" class="register-card-bg" />
-              <div class="register-card-content">
-                <h2 class="register-card-title">Become a Candidate</h2>
-                <p class="register-card-description text-dark">
-                  Start your journey to finding the perfect job by registering with us today.
-                </p>
-              </div>
-              <a href="/signup" class="register-button" role="button">
-                <span>Register now</span>
-                <img src="https://cdn-icons-png.flaticon.com/128/3550/3550091.png" alt="Arrow icon"
-                  class="register-button-icon" />
-              </a>
-            </div>
+            </a>
           </article>
-    
-          <!-- Register as Employer -->
-          <article class="register-option register-option-employer">
-            <div class="register-card">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/6dae8be08416a1194936688cfff70e529dba7dab9323f4844b3873d71edf64aa?apiKey=91f675d5e80646bf9c3e3fcf811a5495&"
-                alt="Employer registration background" class="register-card-bg" />
-              <div class="register-card-content register-card-content-employer">
-                <h2 class="register-card-title">Become an Employer</h2>
-                <p class="register-card-description text-dark">
-                  Connect with top talent and grow your team by joining our platform.
-                </p>
-              </div>
-              <a href="/signup" class="register-button" role="button">
-                <span>Register now</span>
-                <img src="https://cdn-icons-png.flaticon.com/128/3550/3550091.png" alt="Arrow icon"
-                  class="register-button-icon" />
-              </a>
-            </div>
-          </article>
-    
         </div>
       </div>
-    </section>
-    
+    </div>
+  </section>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-columns">
-          <div class="footer-column">
-            <div class="company-info">
-              <div class="logo-container">
-                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6fe6878ba6231e67e1361dc2c26f0f1f32811d6350cc6b578d521435e6132229?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="logo" alt="InternNet logo" />
-                <div class="company-name-footer">InternNet</div>
+
+
+
+  <section class="register-section">
+    <div class="register-container">
+      <div class="register-options">
+
+        <!-- Register as Candidate -->
+        <article class="register-option">
+          <div class="register-card">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/34e5a29a00666c18717554a884685a3b62c06f5e43c8d6a58e16a14552438cab?apiKey=91f675d5e80646bf9c3e3fcf811a5495&"
+              alt="Candidate registration background" class="register-card-bg" />
+            <div class="register-card-content">
+              <h2 class="register-card-title">Become a Candidate</h2>
+              <p class="register-card-description text-dark">
+                Start your journey to finding the perfect job by registering with us today.
+              </p>
+            </div>
+            <a href="/signup" class="register-button" role="button">
+              <span>Register now</span>
+              <img src="https://cdn-icons-png.flaticon.com/128/3550/3550091.png" alt="Arrow icon"
+                class="register-button-icon" />
+            </a>
+          </div>
+        </article>
+
+        <!-- Register as Employer -->
+        <article class="register-option register-option-employer">
+          <div class="register-card">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/6dae8be08416a1194936688cfff70e529dba7dab9323f4844b3873d71edf64aa?apiKey=91f675d5e80646bf9c3e3fcf811a5495&"
+              alt="Employer registration background" class="register-card-bg" />
+            <div class="register-card-content register-card-content-employer">
+              <h2 class="register-card-title">Become an Employer</h2>
+              <p class="register-card-description text-dark">
+                Connect with top talent and grow your team by joining our platform.
+              </p>
+            </div>
+            <a href="/signup" class="register-button" role="button">
+              <span>Register now</span>
+              <img src="https://cdn-icons-png.flaticon.com/128/3550/3550091.png" alt="Arrow icon"
+                class="register-button-icon" />
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-columns">
+        <div class="footer-column">
+          <div class="company-info">
+            <div class="logo-container">
+              <img loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/6fe6878ba6231e67e1361dc2c26f0f1f32811d6350cc6b578d521435e6132229?apiKey=91f675d5e80646bf9c3e3fcf811a5495&"
+                class="logo" alt="InternNet logo" />
+              <div class="company-name-footer">InternNet</div>
+            </div>
+            <div class="contact-info">
+              <div class="phone-container">
+                <div class="phone-label">Call now:</div>
+                <div class="phone-number">(319) 555-0115</div>
               </div>
-              <div class="contact-info">
-                <div class="phone-container">
-                  <div class="phone-label">Call now:</div>
-                  <div class="phone-number">(319) 555-0115</div>
-                </div>
-                <address class="address">
-                  Crow Solutions<br>
-                  Plot No. 27, Rajiv Gandhi Infotech Park<br>
-                  Phase 3, Hinjewadi<br>
-                  Pune, Maharashtra 411057<br>
-                  India              </address>
-              </div>
+              <address class="address">
+                Crow Solutions<br>
+                Plot No. 27, Rajiv Gandhi Infotech Park<br>
+                Phase 3, Hinjewadi<br>
+                Pune, Maharashtra 411057<br>
+                India </address>
             </div>
           </div>
-          <div class="footer-links">
-            <div class="links-container">
-              <div class="links-columns">
-                <div class="quick-links">
-                  <h3 class="links-title">Quick Link</h3>
-                  <nav class="links-list">
-                    <a href="#" class="link-item">About</a>
-                    <a href="#" class="link-item">
-                      <!-- <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4cf5e153916880fcbcda873ec83b58ba447ecf47d060898d67faff2ddd81fc06?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="active-link-icon" alt="" /> -->
-                      <span>Contact</span>
-                    </a>
-                    <a href="#" class="link-item">Pricing</a>
-                    <a href="#" class="link-item">Blog</a>
-                  </nav>
-                </div>
-                <div class="quick-links">
-                  <h3 class="links-title">Candidate</h3>
-                  <nav class="links-list">
-                    <a href="#" class="link-item">Browse Jobs</a>
-                    <a href="#" class="link-item">Browse Employers</a>
-                    <a href="#" class="link-item">Candidate Dashboard</a>
-                    <a href="#" class="link-item">Saved Jobs</a>
-                  </nav>
-                </div>
-                <div class="quick-links">
-                  <h3 class="links-title">Employers</h3>
-                  <nav class="links-list">
-                    <a href="#" class="link-item">Post a Job</a>
-                    <a href="#" class="link-item">Browse Candidates</a>
-                    <a href="#" class="link-item">Employers Dashboard</a>
-                    <a href="#" class="link-item">Applications</a>
-                  </nav>
-                </div>
-                <div class="quick-links">
-                  <h3 class="links-title">Support</h3>
-                  <nav class="links-list">
-                    <a href="#" class="link-item">Faqs</a>
-                    <a href="#" class="link-item">Privacy Policy</a>
-                    <a href="#" class="link-item">Terms & Conditions</a>
-                  </nav>
-                </div>
+        </div>
+        <div class="footer-links">
+          <div class="links-container">
+            <div class="links-columns">
+              <div class="quick-links">
+                <h3 class="links-title">Quick Link</h3>
+                <nav class="links-list">
+                  <a href="#" class="link-item">About</a>
+                  <a href="#" class="link-item">
+                    <!-- <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4cf5e153916880fcbcda873ec83b58ba447ecf47d060898d67faff2ddd81fc06?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="active-link-icon" alt="" /> -->
+                    <span>Contact</span>
+                  </a>
+                  <a href="#" class="link-item">Pricing</a>
+                  <a href="#" class="link-item">Blog</a>
+                </nav>
+              </div>
+              <div class="quick-links">
+                <h3 class="links-title">Candidate</h3>
+                <nav class="links-list">
+                  <a href="#" class="link-item">Browse Jobs</a>
+                  <a href="#" class="link-item">Browse Employers</a>
+                  <a href="#" class="link-item">Candidate Dashboard</a>
+                  <a href="#" class="link-item">Saved Jobs</a>
+                </nav>
+              </div>
+              <div class="quick-links">
+                <h3 class="links-title">Employers</h3>
+                <nav class="links-list">
+                  <a href="#" class="link-item">Post a Job</a>
+                  <a href="#" class="link-item">Browse Candidates</a>
+                  <a href="#" class="link-item">Employers Dashboard</a>
+                  <a href="#" class="link-item">Applications</a>
+                </nav>
+              </div>
+              <div class="quick-links">
+                <h3 class="links-title">Support</h3>
+                <nav class="links-list">
+                  <a href="#" class="link-item">Faqs</a>
+                  <a href="#" class="link-item">Privacy Policy</a>
+                  <a href="#" class="link-item">Terms & Conditions</a>
+                </nav>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div class="footer-bottom-content">
-          <div class="copyright">© 2024 InternNet - Job Portal. All rights Reserved</div>
-          <div class="social-icons">
-            <a href="#" aria-label="Facebook">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/cb214bee65be90895565b871f4f61e858f49e049d89beec31fb5e52f5b66ccc5?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="social-icon" alt="" />
-            </a>
-            <a href="#" aria-label="Twitter">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe49856e68ad1db4faf78072d3463c8b786c2c4076344992d4eefd058d1294b3?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="social-icon" alt="" />
-            </a>
-            <a href="#" aria-label="Instagram">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/09c274a205e06cddbeb6c0aeab71b3c1488f396dca318dcfc9ac7cfefbff9e6a?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="social-icon" alt="" />
-            </a>
-            <a href="#" aria-label="LinkedIn">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7dc11865bd705109f5953a39b1c24f735fec53d1d9a7763019c0efe43428f7fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&" class="social-icon" alt="" />
-            </a>
-          </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <div class="copyright">© 2024 InternNet - Job Portal. All rights Reserved</div>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">
+            <img loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/cb214bee65be90895565b871f4f61e858f49e049d89beec31fb5e52f5b66ccc5?apiKey=91f675d5e80646bf9c3e3fcf811a5495&"
+              class="social-icon" alt="" />
+          </a>
+          <a href="#" aria-label="Twitter">
+            <img loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe49856e68ad1db4faf78072d3463c8b786c2c4076344992d4eefd058d1294b3?apiKey=91f675d5e80646bf9c3e3fcf811a5495&"
+              class="social-icon" alt="" />
+          </a>
+          <a href="#" aria-label="Instagram">
+            <img loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/09c274a205e06cddbeb6c0aeab71b3c1488f396dca318dcfc9ac7cfefbff9e6a?apiKey=91f675d5e80646bf9c3e3fcf811a5495&"
+              class="social-icon" alt="" />
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <img loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/7dc11865bd705109f5953a39b1c24f735fec53d1d9a7763019c0efe43428f7fb?apiKey=91f675d5e80646bf9c3e3fcf811a5495&"
+              class="social-icon" alt="" />
+          </a>
         </div>
       </div>
-    </footer>
-  </body>
-  </html>
-  
+    </div>
+  </footer>
+</body>
+
+</html>
