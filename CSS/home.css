@@ -1,3 +1,150 @@
+:root {
+  --text-dark: #18191c;
+  --text-light: #e0e0e0;
+  --bg-light: #ffffff;
+  --bg-dark: #121212;
+}
+
+
+.section-title,
+.hero-text,
+.text-dark,
+h1, h2, h3, h4, h5, h6,
+p {
+  transition: color 0.3s;
+}
+
+body.light-mode .section-title,
+body.light-mode .hero-text,
+body.light-mode .text-dark,
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode h3, 
+body.light-mode h4, 
+body.light-mode h5, 
+body.light-mode h6,
+body.light-mode p {
+  color: var(--text-dark);
+}
+
+body.dark-mode .section-title,
+body.dark-mode .hero-text,
+body.dark-mode .text-dark,
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6,
+body.dark-mode p {
+  color: var(--text-light);
+}
+
+/* Mode css */
+.mode-btn{
+  background-color: black;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  /* padding: 10px; */
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.mode-img{
+  width: 50px;
+  height: 50px;
+  /* invert  */
+  filter: invert(100%);
+}
+:root {
+  --text-dark: #18191c;
+  --text-light: #e0e0e0;
+  --bg-light: #ffffff;
+  --bg-dark: #121212;
+}
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.section-title,
+.hero-text,
+.text-dark,
+h1, h2, h3, h4, h5, h6,
+p {
+  transition: color 0.3s;
+}
+
+body.light-mode .section-title,
+body.light-mode .hero-text,
+body.light-mode .text-dark,
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode h3, 
+body.light-mode h4, 
+body.light-mode h5, 
+body.light-mode h6,
+body.light-mode p {
+  color: var(--text-dark) !important;
+}
+
+body.dark-mode .section-title,
+body.dark-mode .hero-text,
+body.dark-mode .text-dark,
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6,
+body.dark-mode p {
+  color: var(--text-light) !important;
+}
+
+
+body.dark-mode .mode-img {
+  filter: invert(100%);
+}
+
+/* Mode button styles */
+.mode-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.mode-img {
+  width: 40px;
+  height: 40px;
+  transition: filter 0.3s;
+}
+
+
+/* Debug styles */
+/* body::after {
+  content: 'Current mode: ' attr(class);
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  z-index: 9999;
+} */
+
 /* General Styles */
 .features {
   display: flex;
@@ -335,7 +482,7 @@
   
   .stat-card {
     border-radius: 8px;
-    background-color: #fff;
+    /* background-color: #fff; */
     display: flex;
     flex-grow: 1;
     gap: 20px;
@@ -413,7 +560,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    /* background-color: #fff; */
     padding: 80px 60px;
   }
   @media (max-width: 991px) {

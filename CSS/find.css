@@ -205,6 +205,7 @@ width: 100%;
     line-height: normal;
     width: 33%;
     margin-left: 0;
+    background-color: white;
 }
 
 @media (max-width: 991px) {

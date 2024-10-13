@@ -92,10 +92,75 @@ document.addEventListener('DOMContentLoaded', function () {
                 output.textContent += ' - Scrolling Up!';
             }
             else if
+                (transcript.toLowerCase().includes('up')) {
+                console.log("'scroll up' command recognized");
+                window.scrollBy(0, -200);
+                output.textContent += ' - Scrolling Up!';
+            }
+            else if
                 (transcript.toLowerCase().includes('scroll down')) {
                 console.log("'scroll down' command recognized");
                 window.scrollBy(0, 200);
                 output.textContent += ' - Scrolling Down!';
+            }
+            else if
+                (transcript.toLowerCase().includes('down')) {
+                console.log("'scroll down' command recognized");
+                window.scrollBy(0, 200);
+                output.textContent += ' - Scrolling Down!';
+            }
+            else if
+                (transcript.toLowerCase().includes('enable')) {
+                console.log("'enable' command recognized");
+                output.textContent += ' - Enabling Speak on Hover!';
+                const hover = document.getElementById('speak-on-hover-btn');
+                hover.click();
+
+                console.log("hover")
+                console.log(hover)
+            }
+            else if
+                (transcript.toLowerCase().includes('disable')) {
+                console.log("'disable' command recognized");
+                output.textContent += ' - Disabling Speak on Hover!';
+                const hover = document.getElementById('speak-on-hover-btn');
+                hover.click();
+            }
+            else if
+                (transcript.toLowerCase().includes('stop')) {
+                console.log("'stop' command recognized");
+                recognition.stop();
+            }
+            else if
+                (transcript.toLowerCase().includes('zoom in')) {
+                console.log("'zoom in' command recognized");
+                zoomIn();
+                output.textContent += ' - Zooming In!';
+
+            }
+            else if
+                (transcript.toLowerCase().includes('zoom out')) {
+                console.log("'zoom out' command recognized");
+                zoomOut();
+                output.textContent += ' - Zooming Out!';
+            }
+            else if
+                (transcript.toLowerCase().includes('reset zoom')) {
+                console.log("'reset zoom' command recognized");
+                resetZoom();
+                output.textContent += ' - Resetting Zoom!';
+            }
+            else if
+                (transcript.toLowerCase().includes('dark')) {
+                console.log("'dark mode' command recognized");
+                switchToDarkMode();
+                output.textContent += ' - Switching to Dark Mode!';
+            }
+            else if
+                (transcript.toLowerCase().includes('light')) {
+                console.log("'light mode' command recognized");
+                switchToLightMode();
+                output.textContent += ' - Switching to Light Mode!';
             }
         });
 
@@ -131,4 +196,55 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         console.log('Speech recognition is not supported in this browser.');
     }
+
+    // ZOOM
+
+    // Initialize a variable to keep track of zoom level
+let zoomLevel = 1; // Default zoom level
+
+// Function to zoom in
+function zoomIn() {
+  zoomLevel += 0.1;
+  document.body.style.zoom = zoomLevel;
+}
+
+// Function to zoom out
+function zoomOut() {
+  zoomLevel -= 0.1;
+  document.body.style.zoom = zoomLevel;
+}
+
+// Function to reset zoom
+function resetZoom() {
+  zoomLevel = 1;
+  document.body.style.zoom = zoomLevel;
+}
+
+// Example of how to listen for commands
+function handleVoiceCommand(command) {
+  if (command.includes('zoom in')) {
+    zoomIn();
+  } else if (command.includes('zoom out')) {
+    zoomOut();
+  } else if (command.includes('reset zoom')) {
+    resetZoom();
+  }
+}
+
+
+// Light mode Dark mode
+
+// Function to toggle dark mode
+function switchToDarkMode() {
+    document.body.classList.remove('light-mode');
+    document.body.classList.add('dark-mode');
+  }
+  
+  // Function to toggle light mode
+  function switchToLightMode() {
+    document.body.classList.remove('dark-mode');
+    document.body.classList.add('light-mode');
+  }
+
+
 });
