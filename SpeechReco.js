@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
             else if
                 (transcript.toLowerCase().includes('home')) {
                 console.log("'home' command recognized");
-                window.location.href = "home.html";
+                window.location.href = "index.html";
                 output.textContent += ' - Navigating to Home Page!';
 
             }
