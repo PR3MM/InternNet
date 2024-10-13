@@ -50,12 +50,12 @@ document.addEventListener('DOMContentLoaded', function () {
             output.textContent = transcript;
             console.log('Recognized Text:', transcript);
 
-            if (transcript.toLowerCase().includes('bigger text')) {
+            if (transcript.toLowerCase().includes('increase')) {
                 console.log("'bigger text' command recognized");
                 updateFontSize(true);
                 // applyFontSize();
                 output.textContent += ' - Text size increased!';
-            } else if (transcript.toLowerCase().includes('smaller text')) {
+            } else if (transcript.toLowerCase().includes('decrease')) {
                 console.log("'smaller text' command recognized");
                 updateFontSize(false);
                 // applyFontSize();
@@ -75,6 +75,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log("'home' command recognized");
                 window.location.href = "index.html";
                 output.textContent += ' - Navigating to Home Page!';
+
+            }
+            else if
+                (transcript.toLowerCase().includes('about')) {
+                console.log("'about' command recognized");
+                window.location.href = "about.html";
+                output.textContent += ' - Navigating to about Page!';
 
             }
             // Scroll Up and Down

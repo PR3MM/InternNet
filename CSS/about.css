@@ -1,0 +1,60 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#header-internNet {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#header-title {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#about-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#section-title {
+    color: #000;
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+.about-paragraph {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.about-list {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.about-list-item {
+    margin: 8px 0;
+}
+
+#footer-internNet {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
