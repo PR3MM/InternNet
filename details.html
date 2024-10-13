@@ -17,6 +17,8 @@
   <script src="/speech.js"></script>
   <script src="/SpeechReco.js"></script>
   <script src="/font-size.js"></script>
+  <script src="/Mode.js"></script>
+  <script src="/suggestionreset.js"></script>
 </head>
 <nav class="navbar navbar-expand-lg navbar-dark bg-black">
   <div class="container-fluid">
@@ -32,7 +34,7 @@
           <a class="nav-link text-light" href="find.html">Find Work</a>
           <a class="nav-link disabled text-light">Post a Job</a>
           <a class="nav-link text-light" href="#">Community</a>
-          <a class="nav-link text-light" href="#">About Us </a>
+          <a class="nav-link text-light" href="about.html">About Us </a>
         </div>
         <!--  Feature to increse or decrease the size of the text -->
         
@@ -72,10 +74,11 @@
   <section class="job-search-container">
     <div class="controls-container">
       <div class="font-controls">
+        <button class="mode-btn" id="mode" aria-label="Mode change"><img class="mode-img" src="./logo/switch-off_14440433.png" alt="" srcset=""></button>
         <button class="font-btn" id="font-size-decrease" aria-label="Decrease Font Size">-</button>
         <button class="font-btn" id="font-size-increase" aria-label="Increase Font Size">+</button>
         <button id="speak-on-hover-btn" class="btn-toggle" onclick="toggleSpeakOnHover()" aria-label="Toggle speak on hover">
-          Enable Speak on Hover
+          Enable Speech on Hover
         </button>
       </div>
 
@@ -84,9 +87,10 @@
       </button>
     </div>
 
-    <div id="output" class="output-text">Try speaking Scroll Up/down, Increase/Decrease Font size, Go to Find Work Page</div>
+    <div id="output" class="output-text">Try speaking: Scroll Up/Down, Increase/Decrease Font Size, Go to Find Work Page, Reset Zoom, Zoom In/Out, Switch to Light/Dark Mode, Enable/Disable Speech on Hover, Stop. </div>
   </section>
 </div>
+
 
 
 
