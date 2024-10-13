@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         recognition.addEventListener('result', (event) => {
             const transcript = event.results[event.resultIndex][0].transcript;
             output.textContent = transcript;
+            recognizeText(transcript);
             console.log('Recognized Text:', transcript);
 
             if (transcript.toLowerCase().includes('increase')) {
@@ -130,6 +131,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 (transcript.toLowerCase().includes('stop')) {
                 console.log("'stop' command recognized");
                 recognition.stop();
+                // original output text which gave suggestions
+                output.textContent = 'Try speaking: Scroll Up/Down, Increase/Decrease Font Size, Go to Find Work Page, Reset Zoom, Zoom In/Out, Switch to Light/Dark Mode, Enable/Disable Speech on Hover, Stop.';
+
+
             }
             else if
                 (transcript.toLowerCase().includes('zoom in')) {
@@ -245,6 +250,23 @@ function switchToDarkMode() {
     document.body.classList.remove('dark-mode');
     document.body.classList.add('light-mode');
   }
+
+
+// reset suggestions after 2 seconds after text is recognized
+let resetTimeout; 
+    function recognizeText(text) {
+        const output = document.getElementById('output');
+        output.textContent = text; // Display recognized text
+
+        // Clear any previous timeout to prevent overlapping resets
+        clearTimeout(resetTimeout);
+
+        // Reset suggestions after 2 seconds
+        resetTimeout = setTimeout(() => {
+            output.textContent = "Try speaking: Scroll Up/Down, Increase/Decrease Font Size, Go to Find Work Page, Reset Zoom, Zoom In/Out, Switch to Light/Dark Mode, Enable/Disable Speech on Hover, Stop.";
+        }, 3000);
+    }
+
 
 
 });
