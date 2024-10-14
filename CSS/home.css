@@ -651,7 +651,7 @@ body.dark-mode .mode-img {
     padding: 24px;
   }
   .job-card-highlight {
-    background: linear-gradient(90deg, #fff6e6 0%, #fff 100%), #fff;
+    /* background: linear-gradient(90deg, #fff6e6 0%, #fff 100%), #fff; */
   }
   @media (max-width: 991px) {
     .job-card {
