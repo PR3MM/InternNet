@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InternNet</title>
+  <link rel="icon" href="./logo/internnet-high-resolution-logo-white.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="./CSS/all.css" />
+  <link rel="stylesheet" href="./CSS/bootstrap.css" />
+  <link rel="stylesheet" href="./CSS/home.css" />
+  <!-- <link rel="stylesheet" href="/public/css/signup.css" /> -->
+  <link rel="stylesheet" href="./CSS/find.css" />
+  <link rel="stylesheet" href="./CSS/details.css" />
+  <link rel="stylesheet" href="./CSS/navbarNew.css" />
+  <link rel="stylesheet" href="./CSS/dashboard.css" />
+  <link rel="stylesheet" href="./CSS/Speech.css" />
+  <link rel="stylesheet" href="./CSS/contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="/speech.js"></script>
+  <script src="/SpeechReco.js"></script>
+  <script src="/font-size.js"></script>
+  <script src="/Mode.js"></script>
+  <script src="/suggestionreset.js"></script>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <div class="container-fluid">
+    <!-- <div class="Navbar-links" > -->
+      <a class="navbar-brand" href="index.html">InternNet</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav gap-2">
+          <a class="nav-link  text-light" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link text-light" href="find.html">Find Work</a>
+          <!-- <a class="nav-link disabled text-light">Post a Job</a> -->
+          <a class="nav-link active text-light" href="contact.html">Contact Us</a>
+          <a class="nav-link text-light" href="about.html">About Us </a>
+        </div>
+        <!--  Feature to increse or decrease the size of the text -->
+        
+        <div class="d-flex align-items-center ms-auto">
+          <button type="button" class="btn-n ">
+            Login
+          </button>
+          <button type="button" class="btn-n ">
+            <a class="Sign-a" href="/signup">Sign up for free</a>
+          </button>
+        </div>
+
+        <!-- <header class="header-nn">
+            <a href="#">
+                
+                <img class="invert-color-nn" src="https://cdn-icons-png.flaticon.com/128/2529/2529521.png" alt="" class="icon-nn" />
+            </a>
+            <a href="#">
+                <img class="invert-color-nn"src="https://cdn-icons-png.flaticon.com/128/25/25667.png" alt="" class="icon-nn" />
+            </a>
+            <a href="#">
+                <img src="https://cdn-icons-png.flaticon.com/128/3916/3916611.png" alt="" class="icon-large-nn invert-color-nn" />
+            </a>
+            <div class="avatar-wrapper-nn">
+                    <a href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1326/1326405.png" alt="User avatar" class="avatar-nn" />
+                </a>
+            </div>
+          </header> -->
+
+      </div>
+    <!-- </div> -->
+      
+  </div>
+</nav>
+<div class="features">
+  <section class="job-search-container">
+    <div class="controls-container">
+      <div class="font-controls">
+        <button class="mode-btn" id="mode" aria-label="Mode change"><img class="mode-img" src="./logo/switch-off_14440433.png" alt="" srcset=""></button>
+        <button class="font-btn" id="font-size-decrease" aria-label="Decrease Font Size">-</button>
+        <button class="font-btn" id="font-size-increase" aria-label="Increase Font Size">+</button>
+        <button id="speak-on-hover-btn" class="btn-toggle" onclick="toggleSpeakOnHover()" aria-label="Toggle speak on hover">
+          Enable Speech on Hover
+        </button>
+      </div>
+
+      <button type="button" id="startBtn" class="voice-button" aria-label="Start Speech Recognition">
+        <img src="https://cdn-icons-png.freepik.com/256/3288/3288805.png" alt="Microphone icon" class="mic-icon">
+      </button>
+    </div>
+
+    <div id="output" class="output-text">Try speaking: Scroll Up/Down, Increase/Decrease Font Size, Go to Find Work Page, Reset Zoom, Zoom In/Out, Switch to Light/Dark Mode, Enable/Disable Speech on Hover, Stop. </div>
+  </section>
+</div>
+
+<body>
+  <section id="contact">
+  
+    <h1 class="section-header">Contact</h1>
+    
+    <div class="contact-wrapper">
+    
+    <!-- Left contact page --> 
+      
+      <form id="contact-form" class="form-horizontal" role="form">
+         
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+          </div>
+        </div>
+  
+        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+        
+        <button class="btn  send-button" style="background-color: white;" id="submit" type="submit" value="SEND">
+          <div class="alt-send-button">
+            <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+          </div>
+        
+        </button>
+        
+      </form>
+      
+    <!-- Left contact page --> 
+      
+        <div class="direct-contact-container">
+  
+          <ul class="contact-list">
+            <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Pune, Maharashtra</span></i></li>
+            
+            <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">+91 8823347274</a></span></i></li>
+            
+            <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">InternNet@gmail.com</a></span></i></li>
+            
+          </ul>
+  
+          <hr>
+          <ul class="social-media-list">
+            <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-github" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-codepen" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="#" target="_blank" class="contact-icon">
+              <i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>       
+          </ul>
+          <hr>
+  
+          <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+  
+        </div>
+      
+    </div>
+    
+  </section>  
+    
+    
+
+    <script>
+        const form = document.querySelector('.contactUs-form-professional');
+        const thankYouMessage = document.querySelector('.contactUs-thankYou-message-professional');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent the form from actually submitting
+            thankYouMessage.style.display = 'block'; // Show the thank you message
+            form.reset(); // Reset the form fields
+        });
+    </script>
+</body>
+
+</html>
