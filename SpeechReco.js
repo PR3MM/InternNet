@@ -85,6 +85,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 output.textContent += ' - Navigating to about Page!';
 
             }
+            else if
+                (transcript.toLowerCase().includes('contact')) {
+                console.log("'about' command recognized");
+                window.location.href = "contact.html";
+                output.textContent += ' - Navigating to about Page!';
+
+            }
             // Scroll Up and Down
             else if
                 (transcript.toLowerCase().includes('scroll up')) {
