@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #000;
+    /* background-color: #000; */
     padding-bottom: 100px;
   }
   
@@ -15,7 +15,7 @@ body {
     margin: 0 auto;
     padding: 40px 0;
     font: 300 60px 'Oswald', sans-serif;
-    color: #fff;
+    color: black;
     text-transform: uppercase;
     letter-spacing: 6px;
   }
@@ -42,7 +42,7 @@ body {
   textarea {
     max-width: 400px;
     background-color: #fff;
-    color: #fff;
+    color: black;
     letter-spacing: 1px;
     margin: 3px;
   }
@@ -86,13 +86,13 @@ body {
   
   .list-item {
     line-height: 4;
-    color: #aaa;
+    color: black;
   }
   
   .contact-text {
     font: 300 18px 'Lato', sans-serif;
     letter-spacing: 1.9px;
-    color: #bbb;
+    color: black;
   }
   
   .place {
@@ -108,13 +108,13 @@ body {
   }
   
   .contact-text a {
-    color: #bbb;
+    color: black;
     text-decoration: none;
     transition-duration: 0.2s;
   }
   
   .contact-text a:hover {
-    color: #fff;
+    color: black;
     text-decoration: none;
   }
   
@@ -141,7 +141,7 @@ body {
     margin: 10px 3px;
     line-height: 60px;
     border-radius: 50%;
-    color: #fff;
+    color: black;
     background-color: rgb(27,27,27);
     cursor: pointer; 
     transition: all .2s ease-in-out;
