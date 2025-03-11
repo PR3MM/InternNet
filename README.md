@@ -61,3 +61,4 @@ You can interact with the features of the InterNet website in the following ways
     - Enable/Disable Speech on Hover
     - Stop
 
+![image](https://github.com/user-attachments/assets/71c1144a-a43f-429a-b3ed-61d936294aeb)
